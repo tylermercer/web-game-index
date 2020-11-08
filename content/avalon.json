@@ -1,9 +1,0 @@
-{
-  "name":"Avalon",
-  "description": "A hidden-roles game of intrigue",
-  "url":"https://netgames.io/games/avalon/",
-  "players":{
-    "min":5,
-    "max":10
-  }
-}

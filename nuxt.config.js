@@ -34,14 +34,7 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
-    // https://go.nuxtjs.dev/content
-    '@nuxt/content',
   ],
-
-  // Content module configuration (https://go.nuxtjs.dev/config-content)
-  content: {
-    fullTextSearchFields: ['name', 'description', 'slug', 'implOf']
-  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {

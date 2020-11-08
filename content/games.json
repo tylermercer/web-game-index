@@ -1,0 +1,21 @@
+[
+  {
+    "name":"Avalon",
+    "description": "A hidden-roles game of intrigue",
+    "url":"https://netgames.io/games/avalon/",
+    "players":{
+      "min":5,
+      "max":10
+    }
+  },
+  {
+    "name":"QwikWit",
+    "implOf":"Quiplash",
+    "description": "Try to come up with the most liked answer to various zany questions",
+    "url":"https://www.qwiqwit.com/",
+    "players":{
+      "min":5,
+      "max":25
+    }
+  }
+]

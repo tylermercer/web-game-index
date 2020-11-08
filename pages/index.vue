@@ -1,43 +1,44 @@
 <template>
   <div class="container">
-    <div>
-      <div>
-        <input v-model="query" type="search" autocomplete="off" />
-        <ul v-if="games.length">
-          <li v-for="game in games" :key="game.slug">
-            <NuxtLink :to="game.path">{{ game.name }}<span v-if="game.implOf"> (clone of {{game.implOf}})</span></NuxtLink>
-          </li>
-        </ul>
-        <p v-else-if="query">
-          No results
-        </p>
-      </div>
+    <div class="search">
+      Search:
+      <input v-model="query" type="search" autocomplete="off" />
+    </div>
+    <div class="results">
+      <ul v-if="games.length">
+        <li v-for="game in games" :key="game.slug">
+          {{ game.name }}
+        </li>
+      </ul>
+      <p v-else-if="query">
+        No results
+      </p>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Vue from 'vue';
+import _games from '@/content/games.json';
 
 export default Vue.extend({
   data() {
     return {
-      games: [],
-      query: ''
+      games: _games,
+      query: '',
     };
   },
   watch: {
     async query (query) {
       if (!query) {
-        this.games = []
+        this.games = _games;
         return
       }
 
-      this.games = await (this as any).$content()
-        .only(['name', 'slug', 'path', 'implOf'])
-        .limit(12)
-        .search(query)
-        .fetch()
+      this.games = _games.filter((g: any) => {
+        return g.name.includes(query) || g.description.includes(query) || g.implOf?.includes(query) || g.url.includes(query)
+      })
+
     }
   }
 })
