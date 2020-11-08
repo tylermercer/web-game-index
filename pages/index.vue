@@ -51,6 +51,18 @@ export default Vue.extend({
 </script>
 
 <style>
+
+:root {
+  --accent: chartreuse;
+  --bg-page: #eee;
+  --bg-card: white;
+  --bg-input-text: white;
+  --selection-color: var(--accent);
+  --selection-text-color: var(--bg-card);
+  --text: #35495e;
+  --text-subtitle: #526488;
+}
+
 html {
   font-family:
     'Quicksand',
@@ -62,13 +74,14 @@ html {
     'Helvetica Neue',
     Arial,
     sans-serif;
-  background: #eee;
-  caret-color: chartreuse;
+  background: var(--bg-page);
+  caret-color: var(--accent);
+  color: var(--text);
 }
 
 ::selection {
-  background-color: chartreuse;
-  color: white;
+  background-color: var(--selection-color);
+  color: var(--selection-text-color);
 }
 
 header {
@@ -91,17 +104,18 @@ header {
 .search input {
   border-radius: 5px;
   margin-bottom: 10px;
-  background: white;
+  background: var(--bg-input-text);
   border: none;
   outline: none;
   padding: 10px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 2px solid var(--bg-input-text);
   width: 100%;
   text-align: center;
+  color: inherit;
 }
 
 .search input:focus {
-  border-bottom-color: chartreuse;
+  border-bottom-color: var(--accent);
 }
 
 .results ul {
@@ -113,7 +127,7 @@ header {
   margin: 10px;
   box-shadow: 0px 4px 6px 0px rgba(50,50,93,0.11) , 0px 1px 3px 0px rgba(0,0,0,0.08);
   border-radius: 5px;
-  background: white;
+  background: var(--bg-card);
   padding: 10px;
 }
 
@@ -125,14 +139,13 @@ header {
   display: block;
   font-weight: 300;
   font-size: 100px;
-  color: #35495e;
   letter-spacing: 1px;
 }
 
 .subtitle {
   font-weight: 300;
   font-size: 42px;
-  color: #526488;
+  color: var(--text-subtitle);
   word-spacing: 5px;
   padding-bottom: 15px;
 }
