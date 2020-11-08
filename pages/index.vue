@@ -79,7 +79,7 @@ export default Vue.extend({
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --accent: #FFBB00;
+    --accent: #DDA200;
     --bg-page: #111;
     --bg-card: #111;
     --bg-input-text: #111;
