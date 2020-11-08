@@ -53,10 +53,11 @@ export default Vue.extend({
 <style>
 
 :root {
-  --accent: chartreuse;
-  --bg-page: #eee;
+  --accent: orange;
+  --bg-page: white;
   --bg-card: white;
   --bg-input-text: white;
+  --border-card: var(--text);
   --selection-color: var(--accent);
   --selection-text-color: var(--bg-card);
   --text: #35495e;
@@ -108,14 +109,14 @@ header {
   border: none;
   outline: none;
   padding: 10px;
-  border-bottom: 2px solid var(--bg-input-text);
+  border: 2px solid var(--border-card);
   width: 100%;
   text-align: center;
   color: inherit;
 }
 
 .search input:focus {
-  border-bottom-color: var(--accent);
+  border-color: var(--accent);
 }
 
 .results ul {
@@ -125,9 +126,9 @@ header {
 
 .results ul li {
   margin: 10px;
-  box-shadow: 0px 4px 6px 0px rgba(50,50,93,0.11) , 0px 1px 3px 0px rgba(0,0,0,0.08);
   border-radius: 5px;
   background: var(--bg-card);
+  border: 2px solid var(--border-card);
   padding: 10px;
 }
 
