@@ -209,6 +209,7 @@ header {
   flex-direction: column;
   justify-content: center;
   margin: 10px;
+  width: 300px;
 }
 
 .game {
@@ -216,7 +217,6 @@ header {
   background: var(--bg-card);
   border: 2px solid var(--border-card);
   padding: 10px;
-  width: 300px;
   box-shadow: 4px 4px 0 var(--accent);
 }
 
