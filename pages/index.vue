@@ -9,12 +9,14 @@
       </div>
       <div class="results">
         <ul v-if="games.length">
-          <li class="game" v-for="game in games" :key="game.slug">
-            <span class="title">
-              <a :href="game.url" rel="noreferrer nofollow">{{ game.name }}</a>
-              <span v-if="game.implOf">(based on {{game.implOf}})</span>
-            </span>
-            <span class="description" v-if="game.description">{{ game.description }} </span>
+          <li v-for="game in games" :key="game.slug">
+            <div class="game">
+              <span class="title">
+                <a :href="game.url" rel="noreferrer nofollow">{{ game.name }}</a>
+                <span v-if="game.implOf">(based on {{game.implOf}})</span>
+              </span>
+              <span class="description" v-if="game.description">{{ game.description }} </span>
+            </div>
           </li>
         </ul>
         <p v-else-if="query" class="no-results">
@@ -139,9 +141,14 @@ header {
   list-style: none;
 }
 
-.game {
-  display: block;
+.results li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 10px;
+}
+
+.game {
   border-radius: 5px;
   background: var(--bg-card);
   border: 2px solid var(--border-card);
@@ -152,10 +159,10 @@ header {
 .game .title {
   display: block;
   font-weight: bold;
-  margin-bottom: 10px;
 }
 
 .game .description {
+  margin-top: 100px;
   font-weight: 300;
   color: var(--text-subtitle);
   padding-bottom: 15px;
