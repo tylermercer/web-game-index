@@ -182,7 +182,7 @@ header {
   display: block;
   font-size: 0.7rem;
   margin-top: 2px;
-  color: #888;
+  color: var(--text-subtitle);
 }
 
 .game .description {
