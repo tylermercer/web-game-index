@@ -65,27 +65,29 @@ export default Vue.extend({
 <style>
 
 :root {
-  --accent: #00aa00;
+  --accent: #FFBB00;
   --bg-page: white;
   --bg-card: white;
   --bg-input-text: white;
-  --border-card: var(--text);
+  --border-card: var(--text-high-contrast);
   --selection-color: var(--accent);
   --selection-text-color: var(--bg-card);
   --text: #35495e;
+  --text-high-contrast: black;
   --text-subtitle: #526488;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --accent: #00aa00;
+    --accent: #FFBB00;
     --bg-page: #111;
     --bg-card: #111;
     --bg-input-text: #111;
-    --border-card: var(--text);
+    --border-card: var(--text-high-contrast);
     --selection-color: var(--accent);
     --selection-text-color: var(--bg-card);
     --text: #eee;
+  --text-high-contrast: white;
     --text-subtitle: #ddd;
   }
 }
@@ -106,7 +108,7 @@ html {
 }
 
 a {
-  color: var(--accent);
+  color: var(--text-high-contrast);
 }
 
 * {
@@ -122,7 +124,15 @@ header {
   margin-top: 40px;
   text-align: center;
   font-size: 2em;
-  color: var(--accent);
+  color: var(--text-high-contrast);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 4px;
+  padding: 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .intro {
@@ -184,6 +194,7 @@ header {
   border: 2px solid var(--border-card);
   padding: 10px;
   width: 300px;
+  box-shadow: 4px 4px 0 var(--accent);
 }
 
 .game .title {
