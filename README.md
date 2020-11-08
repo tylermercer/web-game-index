@@ -1,4 +1,4 @@
-# web-game-index
+# Web Game Index
 
 ## Build Setup
 
