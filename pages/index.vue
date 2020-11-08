@@ -18,14 +18,19 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
-import _games from '@/content/games.json';
+import Vue from 'vue'
+import _games from '@/content/games.json'
+import Fuse from 'fuse.js'
 
 export default Vue.extend({
   data() {
     return {
       games: _games,
       query: '',
+      fuse: new Fuse(_games, {
+        shouldSort: false,
+        keys: ['name','description','implOf','url']
+      })
     };
   },
   watch: {
@@ -35,10 +40,7 @@ export default Vue.extend({
         return
       }
 
-      this.games = _games.filter((g: any) => {
-        return g.name.includes(query) || g.description.includes(query) || g.implOf?.includes(query) || g.url.includes(query)
-      })
-
+      this.games = this.fuse.search(query).map(r => r.item)
     }
   }
 })
