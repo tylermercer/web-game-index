@@ -10,7 +10,10 @@
       <div class="results">
         <ul v-if="games.length">
           <li class="game" v-for="game in games" :key="game.slug">
-            <a :href="game.url" class="title">{{ game.name }}</a>
+            <span class="title">
+              <a :href="game.url" rel="noreferrer nofollow">{{ game.name }}</a>
+              <span v-if="game.implOf">(based on {{game.implOf}})</span>
+            </span>
             <span class="description" v-if="game.description">{{ game.description }} </span>
           </li>
         </ul>
