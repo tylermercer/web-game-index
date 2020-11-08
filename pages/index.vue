@@ -174,7 +174,6 @@ header {
 
 .search-container .search {
   border-radius: 5px;
-  margin-bottom: 10px;
   background: var(--bg-input-text);
   border: none;
   outline: none;
@@ -185,15 +184,23 @@ header {
   text-align: center;
   color: inherit;
 }
+.search-container::after {
+  display: block;
+  content: '';
+  width: 0%;
+  height: 2.5px;
+  margin: 1px auto;
+  background-color: var(--accent);
+  transition: width 0.15s ease-out;
+}
+.search-container:focus-within::after {
+  width: 90%;
+}
 
 .search input {
   border: none;
   outline: none;
   background-color: transparent;
-}
-
-.search:focus-within {
-  border-color: var(--accent);
 }
 
 .results ul {
