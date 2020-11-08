@@ -157,18 +157,20 @@ header {
 .game .title {
   display: block;
   font-weight: bold;
+  margin-top: -4px;
 }
 .game .subtitle {
   display: block;
   font-size: 0.7rem;
-  margin-top: 0;
+  margin-top: 2px;
+  color: #888;
 }
 
 .game .description {
-  margin-top: 10px;
+  display: block;
+  margin-top: 4px;
   font-weight: 300;
   color: var(--text-subtitle);
-  padding-bottom: 15px;
 }
 
 .no-results {
