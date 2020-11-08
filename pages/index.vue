@@ -1,5 +1,8 @@
 <template>
   <div class="index">
+    <button @click="toggleDarkMode" id="darkmode-toggle" alt="toggle dark mode">
+      <img src="https://icongr.am/fontawesome/moon-o.svg?size=32"/>
+    </button>
     <header>
       The Mercer Brothers' Magnificent Web Game Index
     </header>
@@ -41,6 +44,24 @@ import _games from '@/content/games.json'
 import Fuse from 'fuse.js'
 
 export default Vue.extend({
+  created() {
+    let isDarkMode = false;
+    if (process.client) {
+      let stored = localStorage.getItem('darkMode');
+      if (stored != null) {
+        console.log(stored, 'true');
+        isDarkMode = stored === 'true';
+        console.log(isDarkMode);
+      }
+      else {
+        isDarkMode = !!window.matchMedia("(prefers-color-scheme: dark)");
+      }
+    }
+    if (isDarkMode) {
+      document.getElementsByTagName('html')[0]
+        .classList.add('dark');
+    }
+  },
   data() {
     return {
       games: _games,
@@ -59,6 +80,16 @@ export default Vue.extend({
       }
 
       this.games = this.fuse.search(query).map(r => r.item)
+    },
+    isDarkMode(newVal) {
+      document.getElementsByTagName('html')[0]
+        .classList.toggle('dark')
+    }
+  },
+  methods: {
+    toggleDarkMode() {
+      this.isDarkMode = !this.isDarkMode;
+      localStorage.setItem('darkMode', `${this.isDarkMode}`)
     }
   }
 })
@@ -79,18 +110,37 @@ export default Vue.extend({
   --text-subtitle: #526488;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --accent: #DDA200;
-    --bg-page: #111;
-    --bg-card: #111;
-    --bg-input-text: #111;
-    --border-card: var(--text-high-contrast);
-    --selection-color: var(--accent);
-    --selection-text-color: var(--bg-card);
-    --text: #eee;
+.dark {
+  --accent: #DDA200;
+  --bg-page: #111;
+  --bg-card: #111;
+  --bg-input-text: #111;
+  --border-card: var(--text-high-contrast);
+  --selection-color: var(--accent);
+  --selection-text-color: var(--bg-card);
+  --text: #eee;
   --text-high-contrast: white;
-    --text-subtitle: #ddd;
+  --text-subtitle: #ddd;
+}
+.dark #darkmode-toggle {
+  filter: invert(1)
+}
+
+#darkmode-toggle {
+  background: none;
+  border: none;
+  outline: none;
+  margin: 0 0 0 auto;
+  display: block;
+  padding: 0;
+  opacity: 0.5;
+}
+#darkmode-toggle:focus {
+  opacity: 1;
+}
+@media screen and (min-width: 600px) {
+  #darkmode-toggle:hover {
+    opacity: 1;
   }
 }
 
@@ -123,7 +173,7 @@ a {
 }
 
 header {
-  margin-top: 40px;
+  margin-top: 20px;
   text-align: center;
   font-size: 2em;
   color: var(--text-high-contrast);
@@ -160,11 +210,15 @@ header {
 
 .search::before {
   content: '';
-  background-image: url(https://icongr.am/fontawesome/search.svg?size=20);
+  background-image: url(https://icongr.am/fontawesome/filter.svg?size=20);
   width: 20px;
   height: 20px;
   display: inline-block;
   margin: 10px;
+}
+
+.dark .search::before {
+  filter: invert(1);
 }
 
 .search-container .search {
@@ -177,7 +231,6 @@ header {
   border: 2px solid var(--border-card);
   width: 100%;
   text-align: center;
-  color: inherit;
 }
 .search-container::after {
   display: block;
@@ -196,6 +249,7 @@ header {
   border: none;
   outline: none;
   background-color: transparent;
+  color: var(--text-subtitle);
 }
 
 .results ul {
