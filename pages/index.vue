@@ -9,8 +9,9 @@
       </div>
       <div class="results">
         <ul v-if="games.length">
-          <li v-for="game in games" :key="game.slug">
-            {{ game.name }}
+          <li class="game" v-for="game in games" :key="game.slug">
+            <a :href="game.url" class="title">{{ game.name }}</a>
+            <span class="description" v-if="game.description">{{ game.description }} </span>
           </li>
         </ul>
         <p v-else-if="query" class="no-results">
@@ -32,7 +33,7 @@ export default Vue.extend({
       games: _games,
       query: '',
       fuse: new Fuse(_games, {
-        shouldSort: false,
+        // shouldSort: false,
         keys: ['name','description','implOf','url']
       })
     };
@@ -53,7 +54,7 @@ export default Vue.extend({
 <style>
 
 :root {
-  --accent: orange;
+  --accent: #00aa00;
   --bg-page: white;
   --bg-card: white;
   --bg-input-text: white;
@@ -76,8 +77,15 @@ html {
     Arial,
     sans-serif;
   background: var(--bg-page);
-  caret-color: var(--accent);
   color: var(--text);
+}
+
+a {
+  color: var(--accent);
+}
+
+* {
+  box-sizing: border-box;
 }
 
 ::selection {
@@ -88,16 +96,17 @@ html {
 header {
   text-align: center;
   font-size: 2em;
+  color: var(--accent);
 }
 
 .container {
-  margin: 0 auto;
-  max-width: 400px;
   display: flex;
   flex-direction: column;
 }
 
 .search {
+  margin: 0 auto;
+  width: 400px;
   padding: 10px;
   font-size: 1.5em;
 }
@@ -120,35 +129,37 @@ header {
 }
 
 .results ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
   padding: 0;
   list-style: none;
 }
 
-.results ul li {
+.game {
+  display: block;
   margin: 10px;
   border-radius: 5px;
   background: var(--bg-card);
   border: 2px solid var(--border-card);
   padding: 10px;
+  width: 300px;
+}
+
+.game .title {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.game .description {
+  font-weight: 300;
+  color: var(--text-subtitle);
+  padding-bottom: 15px;
 }
 
 .no-results {
   text-align: center;
-}
-
-.title {
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: var(--text-subtitle);
-  word-spacing: 5px;
-  padding-bottom: 15px;
 }
 
 .links {
