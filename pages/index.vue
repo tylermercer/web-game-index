@@ -76,6 +76,20 @@ export default Vue.extend({
   --text-subtitle: #526488;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent: #00aa00;
+    --bg-page: #111;
+    --bg-card: #111;
+    --bg-input-text: #111;
+    --border-card: var(--text);
+    --selection-color: var(--accent);
+    --selection-text-color: var(--bg-card);
+    --text: #eee;
+    --text-subtitle: #ddd;
+  }
+}
+
 html {
   font-family:
     'Quicksand',
@@ -128,7 +142,6 @@ header {
 
 .search {
   margin: 0 auto;
-  width: 400px;
   padding: 10px;
   font-size: 1.5em;
 }
