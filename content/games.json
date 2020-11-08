@@ -21,15 +21,19 @@
   },
   {
     "name": "Enigma",
-    "url": "https://netgames.io/games/enigma/"
+    "implOf": "Decrypto",
+    "url": "https://netgames.io/games/enigma/",
+    "description": "Crack your opponents' code before they crack yours"
   },
   {
     "name": "Insider",
-    "url": "https://insider-online.herokuapp.com/"
+    "url": "https://insider-online.herokuapp.com/",
+    "description": "20 questions, but with a sneaky twist--one player knows the answer!"
   },
   {
     "name": "Just One",
-    "url": "https://just1.herokuapp.com/"
+    "url": "https://just1.herokuapp.com/",
+    "description": "Give clues to a secret word, but don't use the same clue as someone else!"
   },
   {
     "name": "Love Letter",
@@ -38,7 +42,8 @@
   },
   {
     "name": "One Night Ultimate Werewolf",
-    "url": "https://netgames.io/games/onu-werewolf/"
+    "url": "https://netgames.io/games/onu-werewolf/",
+    "description": "Work together to identify and stop the werewolves"
   },
   {
     "name": "Person Do Thing",
@@ -63,11 +68,13 @@
   {
     "name": "Snakeout",
     "implOf": "The Resistance",
-    "url": "https://snakeout.tannerkrewson.com/"
+    "url": "https://snakeout.tannerkrewson.com/",
+    "description": "A hidden-roles game. Can you identify the government spies?"
   },
   {
     "name": "Scattergories",
-    "url": "https://swellgarfo.com/scattergories/"
+    "url": "https://swellgarfo.com/scattergories/",
+    "description": "The classic \"Starts-with-the-same-letter\" game"
   },
   {
     "name": "Spyfall",
@@ -82,6 +89,7 @@
   {
     "name": "Longwave",
     "implOf": "Wavelength",
-    "url": "https://longwave.web.app/"
+    "url": "https://longwave.web.app/",
+    "description": "A team-based game of mind-reading and inference"
   }
 ]
