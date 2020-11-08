@@ -12,8 +12,10 @@
       </p>
     </section>
     <div class="container">
-      <div class="search">
-        <input v-model="query" type="search" autocomplete="off" placeholder="Filter games" />
+      <div class="search-container">
+        <label for="search" class="search">
+          <input v-model="query" id="search" type="search" autocomplete="off" placeholder="Filter games" />
+        </label>
       </div>
       <div class="results">
         <ul v-if="games.length">
@@ -150,26 +152,42 @@ header {
   flex-direction: column;
 }
 
-.search {
+.search-container {
   margin: 0 auto;
   padding: 10px;
   font-size: 1.5em;
 }
 
-.search input {
+.search::before {
+  content: '';
+  background-image: url(https://icongr.am/fontawesome/search.svg?size=20);
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin: 10px;
+}
+
+.search-container .search {
   border-radius: 5px;
   margin-bottom: 10px;
   background: var(--bg-input-text);
   border: none;
   outline: none;
-  padding: 10px;
+  display: flex;
+  align-items: stretch;
   border: 2px solid var(--border-card);
   width: 100%;
   text-align: center;
   color: inherit;
 }
 
-.search input:focus {
+.search input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.search:focus-within {
   border-color: var(--accent);
 }
 
