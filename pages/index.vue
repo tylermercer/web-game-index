@@ -11,10 +11,8 @@
         <ul v-if="games.length">
           <li v-for="game in games" :key="game.slug">
             <div class="game">
-              <span class="title">
-                <a :href="game.url" rel="noreferrer nofollow">{{ game.name }}</a>
-                <span v-if="game.implOf">(based on {{game.implOf}})</span>
-              </span>
+              <a class="title" :href="game.url" rel="noreferrer nofollow">{{ game.name }}</a>
+              <span class="subtitle" v-if="game.implOf">based on {{game.implOf}}</span>
               <span class="description" v-if="game.description">{{ game.description }} </span>
             </div>
           </li>
@@ -160,9 +158,14 @@ header {
   display: block;
   font-weight: bold;
 }
+.game .subtitle {
+  display: block;
+  font-size: 0.7rem;
+  margin-top: 0;
+}
 
 .game .description {
-  margin-top: 100px;
+  margin-top: 10px;
   font-weight: 300;
   color: var(--text-subtitle);
   padding-bottom: 15px;
