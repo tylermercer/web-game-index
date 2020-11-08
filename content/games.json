@@ -1,81 +1,81 @@
 [
   {
-    "name":"Avalon",
-    "url":"https://netgames.io/games/avalon/",
+    "name": "Avalon",
+    "url": "https://netgames.io/games/avalon/",
     "description": "A hidden-roles game of intrigue",
-    "players":{
-      "min":5,
-      "max":10
+    "players": {
+      "min": 5,
+      "max": 10
     }
   },
   {
-    "name":"Codenames",
-    "url":"https://codenames.game/"
+    "name": "Codenames",
+    "url": "https://codenames.game/"
   },
   {
-    "name":"Drawphone",
-    "implOf":"Telestrations",
-    "url":"https://drawphone.tannerkrewson.com/"
+    "name": "Drawphone",
+    "implOf": "Telestrations",
+    "url": "https://drawphone.tannerkrewson.com/"
   },
   {
-    "name":"Enigma",
-    "url":"https://netgames.io/games/enigma/"
+    "name": "Enigma",
+    "url": "https://netgames.io/games/enigma/"
   },
   {
-    "name":"Insider",
-    "url":"https://insider-online.herokuapp.com/"
+    "name": "Insider",
+    "url": "https://insider-online.herokuapp.com/"
   },
   {
-    "name":"Just One",
-    "url":"https://just1.herokuapp.com/"
+    "name": "Just One",
+    "url": "https://just1.herokuapp.com/"
   },
   {
-    "name":"Love Letter",
-    "url":"https://netgames.io/games/love-letter/"
+    "name": "Love Letter",
+    "url": "https://netgames.io/games/love-letter/"
   },
   {
-    "name":"One Night Ultimate Werewolf",
-    "url":"https://netgames.io/games/onu-werewolf/"
+    "name": "One Night Ultimate Werewolf",
+    "url": "https://netgames.io/games/onu-werewolf/"
   },
   {
-    "name":"Person Do Thing",
-    "url":"http://www.persondothing.com/"
+    "name": "Person Do Thing",
+    "url": "http://www.persondothing.com/"
   },
   {
-    "name":"Skribbl",
-    "implOf":"Pictionary",
-    "url":"https://skribbl.io/"
+    "name": "Skribbl",
+    "implOf": "Pictionary",
+    "url": "https://skribbl.io/"
   },
   {
-    "name":"QwikWit",
-    "implOf":"Quiplash",
-    "url":"https://www.qwiqwit.com/",
+    "name": "QwikWit",
+    "implOf": "Quiplash",
+    "url": "https://www.qwiqwit.com/",
     "description": "Try to come up with the most liked answer to various zany questions",
-    "players":{
-      "min":5,
-      "max":25
+    "players": {
+      "min": 5,
+      "max": 25
     }
   },
   {
-    "name":"Snakeout",
-    "implOf":"The Resistance",
-    "url":"https://snakeout.tannerkrewson.com/"
+    "name": "Snakeout",
+    "implOf": "The Resistance",
+    "url": "https://snakeout.tannerkrewson.com/"
   },
   {
-    "name":"Scattergories",
-    "url":"https://swellgarfo.com/scattergories/"
+    "name": "Scattergories",
+    "url": "https://swellgarfo.com/scattergories/"
   },
   {
-    "name":"Spyfall",
-    "url":"https://netgames.io/games/spyfall/"
+    "name": "Spyfall",
+    "url": "https://netgames.io/games/spyfall/"
   },
   {
-    "name":"Secret Hitler",
-    "url":"https://netgames.io/games/secret-hitler/"
+    "name": "Secret Hitler",
+    "url": "https://netgames.io/games/secret-hitler/"
   },
   {
-    "name":"Longwave",
-    "implOf":"Wavelength",
-    "url":"https://longwave.web.app/"
+    "name": "Longwave",
+    "implOf": "Wavelength",
+    "url": "https://longwave.web.app/"
   }
 ]
