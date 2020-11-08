@@ -10,12 +10,14 @@
   },
   {
     "name": "Codenames",
-    "url": "https://codenames.game/"
+    "url": "https://codenames.game/",
+    "description": "A classic beloved game of code words and teamwork"
   },
   {
     "name": "Drawphone",
     "implOf": "Telestrations",
-    "url": "https://drawphone.tannerkrewson.com/"
+    "url": "https://drawphone.tannerkrewson.com/",
+    "description": "The telephone game, but with pictures"
   },
   {
     "name": "Enigma",
@@ -31,7 +33,8 @@
   },
   {
     "name": "Love Letter",
-    "url": "https://netgames.io/games/love-letter/"
+    "url": "https://netgames.io/games/love-letter/",
+    "description": "A competition for the princess's heart"
   },
   {
     "name": "One Night Ultimate Werewolf",
@@ -39,12 +42,13 @@
   },
   {
     "name": "Person Do Thing",
-    "url": "http://www.persondothing.com/"
+    "url": "http://www.persondothing.com/",
+    "description": "A conversational game where you try to talk with a limited word bank"
   },
   {
     "name": "Skribbl",
-    "implOf": "Pictionary",
-    "url": "https://skribbl.io/"
+    "url": "https://skribbl.io/",
+    "description": "A pictionary-like game where everyone has to guess the drawing!"
   },
   {
     "name": "QwikWit",
@@ -67,11 +71,13 @@
   },
   {
     "name": "Spyfall",
-    "url": "https://netgames.io/games/spyfall/"
+    "url": "https://netgames.io/games/spyfall/",
+    "description": "A conversational hidden-role game where one player must figure out the setting"
   },
   {
     "name": "Secret Hitler",
-    "url": "https://netgames.io/games/secret-hitler/"
+    "url": "https://netgames.io/games/secret-hitler/",
+    "description": "A conversational hidden-role game pitting noble liberals against malevolent facists plotting to overthrow the government"
   },
   {
     "name": "Longwave",
