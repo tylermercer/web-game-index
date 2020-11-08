@@ -143,6 +143,11 @@ header {
   margin: 40px auto;
 }
 
+.intro a {
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 1.5px;
+}
+
 .intro p:not(:last-child) {
   margin-bottom: 1em;
 }
