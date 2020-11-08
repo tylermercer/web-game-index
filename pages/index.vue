@@ -44,7 +44,7 @@ import _games from '@/content/games.json'
 import Fuse from 'fuse.js'
 
 export default Vue.extend({
-  created() {
+  data() {
     let isDarkMode = false;
     if (process.client) {
       let stored = localStorage.getItem('darkMode');
@@ -61,9 +61,8 @@ export default Vue.extend({
       document.getElementsByTagName('html')[0]
         .classList.add('dark');
     }
-  },
-  data() {
     return {
+      isDarkMode,
       games: _games,
       query: '',
       fuse: new Fuse(_games, {
@@ -88,8 +87,8 @@ export default Vue.extend({
   },
   methods: {
     toggleDarkMode() {
-      this.isDarkMode = !this.isDarkMode;
-      localStorage.setItem('darkMode', `${this.isDarkMode}`)
+      localStorage
+        .setItem('darkMode', `${this.isDarkMode}`);
     }
   }
 })
