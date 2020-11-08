@@ -1,8 +1,16 @@
 <template>
   <div class="index">
     <header>
-      The Mercer Bros. Magnificent Web Game Index
+      The Mercer Brothers' Magnificent Web Game Index
     </header>
+    <section class="intro">
+      <p>
+        This is a list of web-based games you can play with your friends. All the games linked here are free to play and don't require an account.
+      </p>
+      <p>
+        Built with 🧀 by <a href="https://github.com/tylermercer">Tyler Mercer</a> and <a href="https://github.com/drmercer">Dan Mercer</a>.
+      </p>
+    </section>
     <div class="container">
       <div class="search">
         <input v-model="query" type="search" autocomplete="off" placeholder="Filter games" />
@@ -97,9 +105,20 @@ a {
 }
 
 header {
+  margin-top: 40px;
   text-align: center;
   font-size: 2em;
   color: var(--accent);
+}
+
+.intro {
+  max-width: 900px;
+  padding: 0 40px;
+  margin: 40px auto;
+}
+
+.intro p:not(:last-child) {
+  margin-bottom: 1em;
 }
 
 .container {
