@@ -36,7 +36,7 @@ export default Vue.extend({
   watch: {
     async query (query) {
       if (!query) {
-        this.games = _games;
+        this.games = _games
         return
       }
 
