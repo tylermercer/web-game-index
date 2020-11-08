@@ -13,7 +13,7 @@
             {{ game.name }}
           </li>
         </ul>
-        <p v-else-if="query">
+        <p v-else-if="query" class="no-results">
           No results
         </p>
       </div>
@@ -63,6 +63,12 @@ html {
     Arial,
     sans-serif;
   background: #eee;
+  caret-color: chartreuse;
+}
+
+::selection {
+  background-color: chartreuse;
+  color: white;
 }
 
 header {
@@ -95,7 +101,7 @@ header {
 }
 
 .search input:focus {
-  border-bottom-color: red;
+  border-bottom-color: chartreuse;
 }
 
 .results ul {
@@ -109,6 +115,10 @@ header {
   border-radius: 5px;
   background: white;
   padding: 10px;
+}
+
+.no-results {
+  text-align: center;
 }
 
 .title {
