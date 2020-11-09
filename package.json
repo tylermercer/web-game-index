@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@nuxt/typescript-runtime": "^2.0.0",
-    "core-js": "^3.6.5",
+    "core-js": "^3.7.0",
     "fuse.js": "^6.4.3",
     "nuxt": "^2.14.6"
   },
