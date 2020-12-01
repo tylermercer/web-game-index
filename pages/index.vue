@@ -1,11 +1,11 @@
 <template>
   <div class="index">
     <header>
-      The Mercer Brothers' Magnificent Web Game Index
+      The Mercer Brothers' Quarantine-Friendly Web Game Index
     </header>
     <section class="intro">
       <p>
-        This is a list of web-based games you can play with your friends. All the games linked here are free to play and don't require an account.
+        This is a list of web-based games you can play with your friends. All the games linked here are free to play, don't require an account, and work well over a video call.
       </p>
       <p>
         Built with 🧀 by <a href="https://github.com/tylermercer">Tyler Mercer</a> and <a href="https://github.com/drmercer">Dan Mercer</a>.
