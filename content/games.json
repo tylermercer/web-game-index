@@ -1,5 +1,11 @@
 [
   {
+    "name": "Just Stack",
+    "implOf": "Tetris (but co-op multiplayer!)",
+    "url": "https://juststack.net/",
+    "description": "A collaborative tetromino stacking game"
+  },
+  {
     "name": "Avalon",
     "url": "https://netgames.io/games/avalon/",
     "description": "A hidden-roles game of intrigue",
