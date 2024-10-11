@@ -97,5 +97,10 @@
     "implOf": "Wavelength",
     "url": "https://longwave.web.app/",
     "description": "A team-based game of mind-reading and inference"
+  },
+  {
+    "name": "6 Nimmt!"
+    "url": "https://www.nimmt.ca/",
+    "description": "A card game where players aim to avoid collecting cards by strategically placing numbered cards in ascending rows"
   }
 ]
