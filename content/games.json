@@ -102,5 +102,11 @@
     "name": "6 Nimmt!",
     "url": "https://www.nimmt.ca/",
     "description": "A card game where players aim to avoid collecting cards by strategically placing numbered cards in ascending rows"
+  },
+  {
+    "name": "Hanab",
+    "implOf": "Hanabi",
+    "url": "https://www.hanab.cards",
+    "description": "A cooperative game where you know others' hands, but not your own."
   }
 ]
