@@ -2,24 +2,24 @@
 import Games from "../components/Games.vue";
 import Layout from "../layouts/Base.astro";
 import games from "../content/games.json";
+
+const description =
+    "A list of web-based games you can play with your friends. " +
+    "All the games linked here are free to play, don't require you to create an " +
+    "account or download anything, and work well over a video call.";
 ---
 
-<Layout
-    title="Web Game Index"
-    description="A list of web-based games you can play with your friends. All the games linked here are free to play, don't require an account, and work well over a video call."
->
+<Layout title="Web Game Index" description={description}>
     <main class="index">
         <h1>Web Game Index</h1>
         <section class="intro">
-            <p>
-                This is a list of web-based games you can play with your
-                friends. All the games linked here are free to play, don't
-                require an account, and work well over a video call.
-            </p>
+            <p>{description}</p>
             <p>
                 Built with 🧀 by <a href="https://tylermercer.net"
                     >Tyler Mercer</a
-                > and <a href="https://danmercer.net">Dan Mercer</a>.
+                >, <a href="https://danmercer.net">Dan Mercer</a>, and <a
+                    href="https://mercer.dev">E.J. Mercer</a
+                >.
             </p>
         </section>
         <Games client:idle games={games} />
