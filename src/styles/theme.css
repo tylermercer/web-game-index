@@ -1,0 +1,27 @@
+:root {
+    --accent: #FFBB00;
+    --bg-page: white;
+    --bg-card: white;
+    --bg-input-text: white;
+    --border-card: var(--text-high-contrast);
+    --selection-color: var(--accent);
+    --selection-text-color: var(--bg-card);
+    --text: #35495e;
+    --text-high-contrast: black;
+    --text-subtitle: #526488;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --accent: #DDA200;
+      --bg-page: #111;
+      --bg-card: #111;
+      --bg-input-text: #111;
+      --border-card: var(--text-high-contrast);
+      --selection-color: var(--accent);
+      --selection-text-color: var(--bg-card);
+      --text: #eee;
+    --text-high-contrast: white;
+      --text-subtitle: #ddd;
+    }
+  }

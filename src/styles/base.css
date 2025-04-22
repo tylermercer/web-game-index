@@ -1,0 +1,34 @@
+html {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family:
+    'Quicksand',
+    'Source Sans Pro',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    sans-serif;
+  background: var(--bg-page);
+  color: var(--text);
+}
+
+a {
+  color: var(--text-high-contrast);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: var(--selection-color);
+  color: var(--selection-text-color);
+}
+
+input {
+  color: var(--text);
+}
