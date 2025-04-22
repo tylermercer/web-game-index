@@ -70,7 +70,9 @@ const filteredGames = computed(() => {
 }
 
 @media (prefers-color-scheme: dark) {
-  background-image: url(https://icongr.am/fontawesome/search.svg?size=20&color=ffffff);
+  .search::before {
+    background-image: url(https://icongr.am/fontawesome/search.svg?size=20&color=ffffff);
+  }
 }
 
 .search-container .search {
