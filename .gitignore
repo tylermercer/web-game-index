@@ -2,3 +2,9 @@ node_modules/
 .astro/
 dist/
 .env
+
+# generated worker types
+worker-configuration.d.ts
+
+# wrangler cache
+.wrangler/
